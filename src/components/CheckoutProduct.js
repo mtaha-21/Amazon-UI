@@ -29,7 +29,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <StarIcon className="star-icon" />
+              <StarIcon key={i} className="star-icon" />
             ))}
         </div>
         <button onClick={removeFromBasket}>Remove from Basket</button>

@@ -36,14 +36,22 @@ function Product({ id, title, image, price, rating, author, subtitle }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>🌟</p>
+              <p key={i}>🌟</p>
             ))}
         </div>
       </div>
 
       <img src={image} alt="" />
 
-      <button onClick={addToBasket}>Add to Basket</button>
+      <button
+        style={{
+          borderRadius: "8px",
+          height: "25px",
+        }}
+        onClick={addToBasket}
+      >
+        Add to Basket
+      </button>
     </div>
   );
 }
